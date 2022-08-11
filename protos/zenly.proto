@@ -1,0 +1,24 @@
+syntax = "proto2";
+
+package zenly;
+
+option java_package = "net.tomo1560.zenly.api";
+option java_outer_classname = "ZenlyProtos";
+
+message Location {
+  required double latitude = 4;
+  required double longitude = 5;
+}
+
+message User {
+  required string userId = 3;
+  required Location location = 4;
+}
+
+message UserLocation {
+  required User user = 1;
+}
+
+message UsersLocation {
+  repeated User users = 1;
+}
